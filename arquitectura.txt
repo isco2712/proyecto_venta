@@ -1,0 +1,24 @@
+ proyecto_ventas
+base_datos
+    ventas_db.sql
+    script_creacion.sql
+datos
+    clientes.csv
+    productos.csv
+    ventas.csv
+scripts
+    clientes.py
+    productos.py
+    regiones.py
+    categorias.py
+    ventas.py
+mantenedor
+    mantenedor.py
+dashboard
+    dashboard.py
+leer y exportar
+    lectura.py
+reportes
+    exportar_excel.py
+requirements.txt
+arquitectura.txt

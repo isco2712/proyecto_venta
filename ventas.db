@@ -1,0 +1,42 @@
+-- Tablas--
+
+-- Clientes
+CREATE TABLE Clientes (
+    ClienteID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nombre TEXT,
+    Email TEXT
+);
+
+--Productos
+CREATE TABLE Productos (
+    ProductoID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nombre TEXT,
+    Precio REAL
+);
+
+--Ventas
+CREATE TABLE Ventas (
+    VentaID INTEGER PRIMARY KEY AUTOINCREMENT,
+    ClienteID INTEGER,
+    ProductoID INTEGER,
+    Fecha TEXT,
+    Cantidad INTEGER,
+    FOREIGN KEY (ClienteID) REFERENCES Clientes(ClienteID),
+    FOREIGN KEY (ProductoID) REFERENCES Productos(ProductoID)
+);
+
+--Regiones
+CREATE TABLE Regiones (
+    RegionID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nombre TEXT
+);
+
+ALTER TABLE Clientes ADD COLUMN RegionID INTEGER REFERENCES Regiones(RegionID);
+
+--Categorias 
+CREATE TABLE Categorias (
+    CategoriaID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nombre TEXT
+);
+
+ALTER TABLE Productos ADD COLUMN CategoriaID INTEGER REFERENCES Categorias(CategoriaID);

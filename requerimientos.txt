@@ -1,0 +1,14 @@
+pip install -r requirements.txt
+
+--Instalar SQLite
+--Instalar pandas
+pip install pandas
+
+--Leer Archivo PDF
+pip install pdfplumber
+
+--Generar un PDF con tablas
+pip install reportlab
+
+--Streamlit (comportamiento de ventas)
+pip install streamlit pandas
